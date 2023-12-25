@@ -28,3 +28,5 @@
 
 (require 'rainbow-identifiers)
 (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
+
+(desktop-save-mode 1)
