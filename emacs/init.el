@@ -1,6 +1,5 @@
 (load (expand-file-name "~/.quicklisp/slime-helper.el"))
 (setq inferior-lisp-program "sbcl")
-(add-to-list 'auto-mode-alist '("\\.cl\\'" . lisp-mode))
 
 (require 'package)
 (require 'use-package)
