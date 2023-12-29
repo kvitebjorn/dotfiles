@@ -15,9 +15,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(monokai-pro))
+ '(custom-enabled-themes '(dracula))
  '(custom-safe-themes
-   '("16198c5c7319d07ded977d2414a96fff95f468af313cff6f684fd02f9dfff9b2" "603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"))
+   '("603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961" default))
  '(font-use-system-font t)
  '(ispell-dictionary nil)
  '(package-selected-packages
@@ -28,7 +28,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "mononoki" :foundry "UKWN" :slant normal :weight bold :height 120 :width normal)))))
+ '(default ((t (:family "mononoki" :foundry "UKWN" :slant normal :weight normal :height 113 :width normal)))))
 
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
