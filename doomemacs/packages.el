@@ -51,3 +51,4 @@
 
 (package! catppuccin-theme)
 (package! ligature)
+(package! racket-mode)
