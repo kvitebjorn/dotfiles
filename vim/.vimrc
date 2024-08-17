@@ -8,6 +8,8 @@ Plug 'yegappan/lsp'
 call plug#end()
 
 colorscheme catppuccin-mocha
+set tabstop=4
+set shiftwidth=4
 
 let lspOpts = #{autoHighlightDiags: v:true}
 autocmd User LspSetup call LspOptionsSet(lspOpts)
