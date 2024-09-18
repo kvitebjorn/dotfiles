@@ -22,3 +22,9 @@ end, { desc = "Debug go test" })
 map("n", "<leader>dgl", function()
   require("dap-go").debug_last()
 end, { desc = "Debug last go test" })
+
+-- tmux overrides
+map("n", "<C-h>", "<cmd> TmuxNavigateLeft <CR>", { desc = "window left" })
+map("n", "<C-l>", "<cmd> TmuxNavigateRight <CR>", { desc = "window right" })
+map("n", "<C-j>", "<cmd> TmuxNavigateBottom <CR>", { desc = "window down" })
+map("n", "<C-k>", "<cmd> TmuxNavigateUp <CR>", { desc = "window up" })

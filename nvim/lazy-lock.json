@@ -26,5 +26,6 @@
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
   "telescope.nvim": { "branch": "master", "commit": "0df05c9e9f791dbc542c1fb612195f4dc97209b6" },
   "ui": { "branch": "v2.5", "commit": "dbdd2cfa7b6267e007e0b87ed7e2ea5c6979ef22" },
+  "vim-tmux-navigator": { "branch": "master", "commit": "a9b52e7d36114d40350099f254b5f299a35df978" },
   "which-key.nvim": { "branch": "main", "commit": "bfec3d6bc0a9b0b2cb11644642f78c2c3915eef0" }
 }
