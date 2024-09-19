@@ -7,25 +7,25 @@ local plugins = {
       local dashboard = require "alpha.themes.dashboard"
       dashboard.section.header.val = require "other.dashboard-art-lain"
 
-      dashboard.section.buttons.val = {
-        dashboard.button("i", "    new file", ":ene <BAR> startinsert<CR>"),
-        dashboard.button("o", "    old files", ":Telescope oldfiles<CR>"),
-        dashboard.button("f", "󰥨    find file", ":Telescope file_browser<CR>"),
-        dashboard.button("g", "󰱼    find text", ":Telescope live_grep_args<CR>"),
-        dashboard.button("h", "    browse git", ":Flog<CR>"),
-        dashboard.button("l", "󰒲    lazy", ":Lazy<CR>"),
-        dashboard.button("m", "󱌣    mason", ":Mason<CR>"),
-        dashboard.button("p", "󰄉    profile", ":Lazy profile<CR>"),
-        dashboard.button("q", "󰭿    quit", ":qa<CR>"),
-      }
-      for _, button in ipairs(dashboard.section.buttons.val) do
-        button.opts.hl = "Normal"
-        button.opts.hl_shortcut = "Function"
-      end
+      --dashboard.section.buttons.val = {
+      --  dashboard.button("i", "    new file", ":ene <BAR> startinsert<CR>"),
+      --  dashboard.button("o", "    old files", ":Telescope oldfiles<CR>"),
+      --  dashboard.button("f", "󰥨    find file", ":Telescope file_browser<CR>"),
+      --  dashboard.button("g", "󰱼    find text", ":Telescope live_grep_args<CR>"),
+      --  dashboard.button("h", "    browse git", ":Flog<CR>"),
+      --  dashboard.button("l", "󰒲    lazy", ":Lazy<CR>"),
+      --  dashboard.button("m", "󱌣    mason", ":Mason<CR>"),
+      --  dashboard.button("p", "󰄉    profile", ":Lazy profile<CR>"),
+      --  dashboard.button("q", "󰭿    quit", ":qa<CR>"),
+      --}
+      --for _, button in ipairs(dashboard.section.buttons.val) do
+      --  button.opts.hl = "Normal"
+      --  button.opts.hl_shortcut = "Function"
+      --end
       dashboard.section.footer.opts.hl = "Special"
       dashboard.opts.layout = {
         dashboard.section.header,
-        dashboard.section.buttons,
+        --  dashboard.section.buttons,
         dashboard.section.footer,
       }
       return dashboard
@@ -48,7 +48,12 @@ local plugins = {
         callback = function()
           local stats = require("lazy").stats()
           local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-          dashboard.section.footer.val = "󱐋 " .. stats.count .. " plugins loaded in " .. ms .. "ms"
+          dashboard.section.footer.val = "プレゼント・デイ、プレゼント・タイム"
+            .. " 󱐋 "
+            .. stats.count
+            .. " plugins loaded in "
+            .. ms
+            .. "ms"
           pcall(vim.cmd.AlphaRedraw)
         end,
       })
