@@ -1,2 +1,2 @@
 # dotfiles
-currently using neovim + tmux
+currently using ~~neovim + tmux~~ ... vscode lol
