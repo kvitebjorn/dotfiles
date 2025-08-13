@@ -18,8 +18,12 @@ window#waybar {
 #battery,
 #network,
 #clock,
+#cpu,
 #custom-applauncher,
+#memory,
 #tray,
+#user,
+#window,
 #workspaces,
 #wireplumber {
   background-image: linear-gradient(to bottom, #27232b 100%);

@@ -8,22 +8,42 @@
   "margin-right": 500,
   "margin-left": 500,
   "modules-left": [
-    "sway/workspaces"
+    "user",
+    "sway/workspaces",
+    "sway/window"
   ],
   "modules-center": [
     "custom/applauncher"
   ],
   "modules-right": [
+    "memory",
+    "cpu",
     "network",
     "battery",
     "wireplumber",
     "tray",
     "clock"
   ],
+  "user": {
+    "format": "{user} (up {work_d} days ↑)",
+    "interval": 60,
+    "height": 30,
+    "width": 30,
+    "icon": true,
+  },
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": false,
     "tooltip": false
+  },
+  "sway/window": {
+    "format": "{title}",
+    "max-length": 60,
+    "rewrite": {
+       "(.*) - Mozilla Firefox": "🌎 $1",
+       "(.*) - Visual Studio Code": " $1",
+       "(.*)@navi(.*)": " [$1]"
+    }
   },
   "custom/applauncher": {
     "format": "〇",
@@ -37,6 +57,16 @@
   "clock": {
     "format": "󰅐 {:%H:%M}",
     "tooltip": false
+  },
+  "cpu": {
+      "interval": 10,
+      "format": "{}% ",
+      "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": "{}% ",
+    "max-length": 10
   },
   "network": {
     "format-wifi": " {bandwidthDownBits}",
