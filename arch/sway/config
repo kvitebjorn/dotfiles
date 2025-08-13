@@ -37,16 +37,11 @@ set $bg "/home/kyle/Pictures/wallpapers/spectre-shibuya.png"
 output * bg $bg stretch
 
 ### Idle configuration
-# This will lock your screen after 1200 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+# This will lock your screen after 1200 seconds of inactivity
 #
 
 set $lock 'swaylock -f -i $bg -s stretch'
-exec swayidle -w \
-         timeout 1200 'swaylock -f -c 000000' \
-         timeout 1500 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep $lock
+exec swayidle -w timeout 1200 $lock
 # =================================================================
 
 
