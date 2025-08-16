@@ -10,6 +10,9 @@ exec --no-startup-id sh -c ' eval $(gnome-keyring-daemon --login) eval $(gnome-k
 # Start the network manager applet, can comment out this line if you don't use network manager.
 exec nm-applet
 
+# Hide our cursor after inactivity cuz we hate mouse
+seat seat0 hide_cursor 10000
+
 # =================================================================
 
 
