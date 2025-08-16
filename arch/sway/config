@@ -25,27 +25,6 @@ exec nm-applet
 # output HDMI-A-2 pos 4480 0 res 3840x2160@59.997Hz
 # =================================================================
 
-
-#!!!!!!!!!!!!!!!!!!!!!! EDIT THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-# ===================== WALLPAPER =================================
-# You can have different wp per monitor by changing the *
-# to the specific display output. Make sure to edit the directory
-# to your wallpaper!
-
-set $bg "/home/kyle/Pictures/wallpapers/spectre-shibuya.png"
-
-output * bg $bg stretch
-
-### Idle configuration
-# This will lock your screen after 1200 seconds of inactivity
-#
-
-set $lock 'swaylock -f -i $bg -s stretch'
-exec swayidle -w timeout 1200 $lock
-# =================================================================
-
-
-
 # ===================== APP VARIABLES =============================
 # These are the applications we use, and also where I set the 
 # mod key (in this case it's the super key, i.e the windows key.)
@@ -59,6 +38,34 @@ set $application_launcher pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --s
 set $file_explorer nemo
 # =================================================================
 
+
+#!!!!!!!!!!!!!!!!!!!!!! EDIT THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# ===================== WALLPAPER =================================
+# You can have different wp per monitor by changing the *
+# to the specific display output. Make sure to edit the directory
+# to your wallpaper!
+
+set $bg "/home/kyle/Pictures/wallpapers/spectre-shibuya.png"
+
+output * bg $bg stretch
+
+### Idle configuration
+# This will lock your screen after 1200 seconds of inactivity
+# and then dim the screen after an additional 60 seconds.
+
+set $lock 'swaylock -f -i $bg -s stretch'
+exec swayidle -w \
+  timeout 1200 $lock \
+  timeout 1260 'ddcutil setvcp 10 1' \
+  resume 'ddcutil setvcp 10 85'
+
+### Manual screen locking:
+# Trigger the swayidle timeout TWICE:
+#   1. trigger swaylock
+#   2. trigger the screen dim
+bindsym $mod+Escape exec 'killall -s SIGUSR1 swayidle; killall -s SIGUSR1 swayidle;'
+
+# =================================================================
 
 
 # ===================== BORDERS & GAPS ============================
@@ -135,7 +142,6 @@ bindsym $mod+d exec $application_launcher
 bindsym $mod+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+space floating toggle
-bindsym $mod+Escape exec $lock
 
 floating_modifier $mod normal
 
