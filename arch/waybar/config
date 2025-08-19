@@ -42,6 +42,7 @@
     "rewrite": {
        "(.*) - Mozilla Firefox": "🌎 $1",
        "(.*) - Visual Studio Code": " $1",
+       ".*nvim:(.*)": " $1",
        "(.*)@navi(.*)": " [$1]"
     }
   },
