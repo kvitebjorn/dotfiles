@@ -1,7 +1,7 @@
 # ===================== BASIC START-UP STUFF ======================
 
-# Set the default font used by sway, I like maple mono.
-font pango:Maple Mono Regular 10
+# Set the default font used by sway, I like iosevka ss07.
+font pango:Iosevka SS07 10
 
 # Start the auth agent, if you don't use this you can comment out this line.
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
