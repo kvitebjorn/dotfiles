@@ -48,15 +48,15 @@ set $file_explorer nemo
 # to the specific display output. Make sure to edit the directory
 # to your wallpaper!
 
-set $bg "/home/kyle/Pictures/wallpapers/spectre-shibuya.png"
+set $bg "/home/kyle/Pictures/wallpapers/lilith.jpg"
 
-output * bg $bg stretch
+output * bg $bg fit
 
 ### Idle configuration
 # This will lock your screen after 1200 seconds of inactivity
 # and then dim the screen after an additional 60 seconds.
 
-set $lock 'swaylock -f -i $bg -s stretch'
+set $lock 'swaylock -f -i $bg -s fit'
 exec swayidle -w \
   timeout 1200 $lock \
   timeout 1260 'ddcutil setvcp 10 1' \
