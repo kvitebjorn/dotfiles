@@ -60,13 +60,16 @@ set $lock 'swaylock -f -i $bg -s fit'
 exec swayidle -w \
   timeout 1200 $lock \
   timeout 1260 'ddcutil setvcp 10 1' \
-  resume 'ddcutil setvcp 10 85'
+  resume 'ddcutil setvcp 10 70'
 
 ### Manual screen locking:
 # Trigger the swayidle timeout TWICE:
 #   1. trigger swaylock
 #   2. trigger the screen dim
 bindsym $mod+Escape exec 'killall -s SIGUSR1 swayidle; killall -s SIGUSR1 swayidle;'
+
+### Bluelight filter
+exec wlsunset -l 51.05 -L -114.06
 
 # =================================================================
 
