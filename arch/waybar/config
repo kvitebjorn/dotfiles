@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock", "custom/weather"],
-    "modules-right": ["wlr/taskbar", "pulseaudio", "memory", "cpu"],
+    "modules-right": ["wlr/taskbar", "pulseaudio", "memory", "cpu", "tray"],
     "sway/window": {
         "max-length": 50
     },
@@ -45,8 +45,18 @@
     },
     "custom/weather": {
         "tooltip": false,
-        "exec": "curl 'https://wttr.in/Warsaw?format=1'",
+        "exec": "curl 'https://wttr.in/Calgary?format=1'",
         "interval": 800
-    }
-
+    },
+        "network": {
+        "format-wifi": " {bandwidthDownBits}",
+        "format-ethernet": " {bandwidthDownBits}",
+        "format-disconnected": "󰤮 No Network",
+        "interval": 5,
+        "tooltip": false
+  },
+    "tray": {
+        "spacing": 10,
+        "tooltip": false
+  }
 }
