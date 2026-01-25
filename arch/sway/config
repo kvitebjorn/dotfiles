@@ -27,6 +27,7 @@ seat seat0 hide_cursor 10000
 # output DP-1 pos 0 0 res 1920x1080@144.001Hz
 # output HDMI-A-2 pos 4480 0 res 3840x2160@59.997Hz
 # =================================================================
+output HDMI-A-1 pos 1920 0 res 1920x1080@60.000Hz
 
 # ===================== APP VARIABLES =============================
 # These are the applications we use, and also where I set the 
@@ -48,7 +49,7 @@ set $file_explorer nemo
 # to the specific display output. Make sure to edit the directory
 # to your wallpaper!
 
-set $bg "/home/kyle/Pictures/wallpapers/lilith.jpg"
+set $bg "/home/kyle/Pictures/wallpapers/mbvm-wallpaper.png"
 
 output * bg $bg fit
 
